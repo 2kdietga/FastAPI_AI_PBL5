@@ -1,26 +1,72 @@
-.idea
-.ipynb_checkpoints
-.mypy_cache
-.vscode
-__pycache__
-.pytest_cache
-htmlcov
-dist
-site
-.coverage*
-coverage.xml
-.netlify
-test.db
-log.txt
-Pipfile.lock
-env3.*
-env
-docs_build
-site_build
-venv
-docs.zip
-archive.zip
+# ==========================================
+# 1. Byte-compiled / Optimized files
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
 
-*~
-.*.sw?
-.cache
+# ==========================================
+# 2. Virtual Environments (Môi trường ảo)
+# ==========================================
+venv/
+.venv/
+env/
+.env_virtual/
+ENV/
+
+# ==========================================
+# 3. Environment Variables (Biến môi trường)
+# ==========================================
+# QUAN TRỌNG: Không bao giờ commit file chứa API key, mật khẩu Database
+.env
+.env.*
+# Cho phép commit file mẫu để người khác biết cấu trúc biến môi trường
+!.env.example 
+
+# ==========================================
+# 4. FastAPI / Web Project Specific
+# ==========================================
+# Các thư mục chứa file upload từ user hoặc AI xử lý
+uploads/
+media/
+files/
+# Bỏ qua database SQLite cục bộ (nếu có dùng để test)
+*.sqlite3
+db.sqlite3
+
+# ==========================================
+# 5. Type checking & Testing
+# ==========================================
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ==========================================
+# 6. Build / Distribution / Packaging
+# ==========================================
+build/
+dist/
+*.egg-info/
+*.egg
+wheels/
+
+# ==========================================
+# 7. Editors / IDEs (Trình soạn thảo)
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================================
+# 8. OS generated files (Hệ điều hành)
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
